@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--main-background : hsl(222, 26%, 31%);
+--toggle-key-background : hsl(223, 31%, 20%);
+--screen-background : hsl(224, 36%, 15%);
+--del-reset-background : hsl(225, 21%, 49%);
+--Desaturated-dark-blue-key-shadow : hsl(224, 28%, 35%);
+--Red : hsl(6, 63%, 50%);
+--Dark-red : hsl(6, 70%, 34%);
+--Light-grayish-orange : hsl(30, 25%, 89%);
+--Grayish-orange : hsl(28, 16%, 65%);
+--text: hsl(221, 14%, 31%)
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-background);
+    color: white;
+    font-family: 'League Spartan';
+}
+
+.top-part {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.screen {
+    background-color: var(--screen-background);
+    height: 4rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+button {
+    border: none;
+    border-radius: 0.25rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.button {
+    background-color: var(--toggle-key-background);
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.75rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 0.75rem;
+}
+
+
+
+.button > * {
+    width: 3rem;
+    height: 2rem;
+    /* margin: 0 0.5rem 0.5rem 0; */
+    font-weight: 900;
+    font-size: 1.125rem;
+    background-color: var(--Light-grayish-orange);
+    color: var(--text);
+    border-bottom: .1875rem solid var(--Grayish-orange);
+}
+
+.button > *:active {
+    background-color: white;
+}
+
+
+.submit-button {
+    background-color: var(--toggle-key-background);
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 0 0.75rem 0.75rem 0.75rem; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.submit-button > *, #delete {
+    height: 2rem;
+    color: white;
+    font-weight: 800;
+    font-size: .75rem;
+}
+
+#reset, #delete {
+    background-color: var(--del-reset-background);
+    border-bottom: .1875rem solid var(--Desaturated-dark-blue-key-shadow);
+}
+
+#reset:active, #delete:active {
+    background-color: hsl(225, 50%, 64%);
+}
+
+#calc {
+    background-color: var(--Red);
+    border-bottom: .1875rem solid var(--Dark-red);
+}
+
+#calc:active {
+    background-color:  hsl(6, 86%, 66%);
+}
