@@ -12,11 +12,13 @@
 --screen-background : hsl(224, 36%, 15%);
 --del-reset-background : hsl(225, 21%, 49%);
 --Desaturated-dark-blue-key-shadow : hsl(224, 28%, 35%);
---Red : hsl(6, 63%, 50%);
---Dark-red : hsl(6, 70%, 34%);
---Light-grayish-orange : hsl(30, 25%, 89%);
---Grayish-orange : hsl(28, 16%, 65%);
---text: hsl(221, 14%, 31%)
+--Calc : hsl(6, 63%, 50%);
+--Dark-Calc : hsl(6, 70%, 34%);
+--main-button : hsl(30, 25%, 89%);
+--main-button-dark : hsl(28, 16%, 65%);
+--text: hsl(221, 14%, 31%);
+--reset-delete-active: hsl(225, 50%, 64%);
+--calc-active: hsl(6, 86%, 66%)
 }
 
 body {
@@ -27,6 +29,10 @@ body {
     background-color: var(--main-background);
     color: white;
     font-family: 'League Spartan';
+}
+
+main {
+    scale: 1.2;
 }
 
 .top-part {
@@ -74,9 +80,9 @@ button:hover {
     /* margin: 0 0.5rem 0.5rem 0; */
     font-weight: 900;
     font-size: 1.125rem;
-    background-color: var(--Light-grayish-orange);
+    background-color: var(--main-button);
     color: var(--text);
-    border-bottom: .1875rem solid var(--Grayish-orange);
+    border-bottom: .1875rem solid var(--main-button-dark);
 }
 
 .button > *:active {
@@ -106,14 +112,14 @@ button:hover {
 }
 
 #reset:active, #delete:active {
-    background-color: hsl(225, 50%, 64%);
+    background-color: var(--reset-delete-active);
 }
 
 #calc {
-    background-color: var(--Red);
-    border-bottom: .1875rem solid var(--Dark-red);
+    background-color: var(--Calc);
+    border-bottom: .1875rem solid var(--Dark-Calc);
 }
 
 #calc:active {
-    background-color:  hsl(6, 86%, 66%);
+    background-color:  var(--calc-active);
 }

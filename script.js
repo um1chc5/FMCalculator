@@ -34,10 +34,10 @@ const Calc = function() {
         } else {scan += 1}
     }
 
-    var numberArray = Object.keys(numberObject).map(key => parseInt(numberObject[key]));
-    // console.log(numberArray)
-    // console.log(functionArray)
-    // console.log(numberObject)
+    var numberArray = Object.keys(numberObject).map(key => parseFloat(numberObject[key]));
+    console.log(numberArray)
+    console.log(functionArray)
+    console.log(numberObject)
     
     // Tính toán 
 
@@ -62,7 +62,7 @@ Array.from(button).forEach(e => {
         var inputValue = e.textContent
 
         if (isCalc) {
-            if (numbers.includes(parseInt(inputValue))) {
+            if (numbers.includes(parseInt(inputValue)) || numbers.includes(inputValue)) {
                 resetButton.click()
             } else {
                 resetScreen()
